@@ -8,9 +8,16 @@ function Item ({ product }) {
       <Link to={`/products/${product.id}`}>
         <p>{product.contenidoEstrucural}</p>
         <p>{product.contenidoEspecifico}</p>
+        <p>{product.ejes}</p>
         <p>{product.price}</p>
       </Link>
-      <Button variant="outline-info">Add to cart</Button>
+      <Button 
+        variant="outline-info"
+        as={Link}//esto es de boostrap
+        to={`/products/${product.id}`}
+        >
+        ver tareas especificas
+      </Button>
     </div>
   )
 }
